@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include <string.h>
+
+// Define a structure to hold student information
+struct student {
+    char name[100];  // To hold the name of the student
+    int rollno;      // To hold the roll number of the student
+    int marks[10];   // To hold the marks of the student in up to 10 subjects
+} s[100];            // Array to hold up to 100 students
+
+// Function prototype for calculating and displaying average marks
+void calculateAndDisplayAverage(struct student s[], int n, int nos);
+
+int main() {
+    int n, nos;
+
+    // Ask the user for the number of students
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+
+    // Ask the user for the number of subjects
+    printf("Enter number of subjects: ");
+    scanf("%d", &nos);
+
+    // Loop through each student to input their details
+    for (int i = 0; i < n; i++) {
+        // Input the student's name
+        printf("Enter Name of student %d: ", i + 1);
+        scanf("%s", s[i].name);  // Read the student's name
+
+        // Input the student's roll number
+        printf("Enter Roll Number of student %d: ", i + 1);
+        scanf("%d", &s[i].rollno);  // Read the student's roll number
+
+        printf("Enter Marks\n");
+
+        // Input the student's marks for each subject
+        for (int j = 0; j < nos; j++) {
+            printf("Enter marks for subject %d: ", j + 1);
+            scanf("%d", &s[i].marks[j]);  // Read the student's marks
+        }
+    }
+
+    // Calculate and display average marks for each student
+    calculateAndDisplayAverage(s, n, nos);
+
+    return 0;
+}
+
+// Function to calculate and display the average marks of each student
+void calculateAndDisplayAverage(struct student s[], int n, int nos) {
+    for (int i = 0; i < n; i++) {
+        float avg = 0;
+        for (int j = 0; j < nos; j++) {
+            avg += s[i].marks[j];  // Add the marks to the total sum
+        }
+        // Calculate and print the average marks for the student
+        printf("Average marks of student %d (%s) is: %.2f\n", i + 1, s[i].name, avg / nos);
+    }
+}
