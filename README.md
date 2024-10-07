@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @Rishabh10077
 - 📖 I am currently studying in SRMIST Kattankulathur, Chennai and I am a 2nd year CSE Core student
-- 👀 I’m interested in Coding in languages like C, C++, Java, python, HTML, CSS, JavaScript
+- 👀 I’m passionate for Coding in languages like C, C++, Java, python, HTML, CSS, JavaScript
 - 🌱 I’m currently learning JavaScript
 - 💞️ I’m looking to collaborate on Web Development
 - 📫 You can reach me by email-rk0976@srmist.edu.in or phone number - +919696712934
